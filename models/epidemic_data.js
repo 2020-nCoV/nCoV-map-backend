@@ -13,10 +13,11 @@ class MyModel extends model{
             longitude: { type: Sequelize.STRING, allowNull: false, comment: '经度' },
             latitude: { type: Sequelize.STRING, allowNull: false, comment: '纬度' },
             normal: { type: Sequelize.STRING, allowNull: false, comment: '经纬度标准' },
-            infection: { type: Sequelize.INTEGER, allowNull: false, comment: '感染人数' },
-            doubt: { type: Sequelize.INTEGER, allowNull: false, comment: '疑似感染' },
-            death: { type: Sequelize.INTEGER, allowNull: false, comment: '死亡人数' },
-            rehab: { type: Sequelize.INTEGER, allowNull: false, comment: '治愈人数' },
+            infection: { type: Sequelize.INTEGER, allowNull: false, comment: '新增感染人数' },
+            doubt: { type: Sequelize.INTEGER, allowNull: false, comment: '新增疑似感染人数' },
+            serious: { type: Sequelize.INTEGER, allowNull: false, comment: '新增重症人数' },
+            death: { type: Sequelize.INTEGER, allowNull: false, comment: '新增死亡人数' },
+            rehab: { type: Sequelize.INTEGER, allowNull: false, comment: '新增治愈人数' },
             timestmp: { type: Sequelize.BIGINT, allowNull: false, comment: '数据时间' },
         }, { timestamps: false })
     }
