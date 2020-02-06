@@ -6,20 +6,20 @@
     "start": "node ./index.js"
   },
   "dependencies": {
-    "assert": "^2.0.0",
-    "axios": "^0.19.2",
-    "cookie-parser": "~1.4.3",
-    "crypto": "^1.0.1",
-    "crypto-js": "^3.1.9-1",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "fs": "^0.0.1-security",
-    "less-middleware": "~2.2.1",
-    "log4js": "^6.1.1",
-    "morgan": "~1.9.0",
-    "multer": "^1.4.2",
-    "path": "^0.12.7",
-    "pg": "^7.18.1",
-    "sequelize": "^5.21.3"
+    "assert": "2.0.0",
+    "axios": "0.19.2",
+    "cookie-parser": "1.4.3",
+    "crypto": "1.0.1",
+    "crypto-js": "3.1.9-1",
+    "debug": "2.6.9",
+    "express": "4.16.0",
+    "fs": "0.0.1-security",
+    "less-middleware": "2.2.1",
+    "log4js": "6.1.1",
+    "morgan": "1.9.0",
+    "multer": "1.4.2",
+    "path": "0.12.7",
+    "pg": "7.18.1",
+    "sequelize": "5.21.3"
   }
 }
