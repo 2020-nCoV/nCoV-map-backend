@@ -1,0 +1,67 @@
+enum SurveyStatus {
+  "草稿"
+  DRAFT
+  "已发布"
+  PUBLISH
+  "已下架"
+  UNPUBLISH
+  "回收站"
+  TRASH
+}
+
+type Question {
+  id: ID
+  title: String
+  content: String
+  status: SurveyStatus
+  topic: [String]
+
+  createdAt: ISODate
+  updatedAt: ISODate
+}
+
+type Questions {
+  questions: [Question]
+  pager: Pager
+}
+
+input QuestionsSearch {
+  id: ID
+  title: String
+  content: String
+  status: SurveyStatus
+  topic: [String]
+}
+
+input CreateSurveyInput {
+  title: String!
+  content: String!
+  status: SurveyStatus
+  topic: [String!]!
+}
+
+input UpdateSurveyInput {
+  title: String
+  content: String
+  status: SurveyStatus
+  topic: [String]
+}
+
+type SurveyQuery {
+  question(id: ID, paging: Paging, sorting: Sorting): Question
+  questions(search: QuestionsSearch, paging: Paging, sorting: Sorting): Questions
+}
+
+type SurveyMutation {
+  createQuestion(input: CreateSurveyInput!): Question @scope(type: PRIVATE)
+  updateQuestion(id: ID!, input: UpdateSurveyInput!): Question
+  deleteQuestion(id: ID!): Boolean
+}
+
+extend type Query {
+  survey: SurveyQuery
+}
+
+extend type Mutation {
+  survey: SurveyMutation
+}

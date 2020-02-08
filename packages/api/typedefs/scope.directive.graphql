@@ -1,0 +1,8 @@
+directive @scope(type: Scope = PRIVATE) on FIELD_DEFINITION
+
+enum Scope {
+  "公开访问"
+  PUBLIC
+  "必须登录访问"
+  PRIVATE
+}

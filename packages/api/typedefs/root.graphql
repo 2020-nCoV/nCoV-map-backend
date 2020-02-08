@@ -1,0 +1,45 @@
+scalar ISODate
+scalar Any
+scalar BigInt
+
+enum SortBy {
+  ASC
+  DESC
+}
+
+enum OpResult {
+  SUCCESS
+  FAIL
+  ERROR
+}
+
+type Pager {
+  limit: Int
+  offset: Int
+  total: Int
+}
+
+input Paging {
+  limit: Int
+  offset: Int
+}
+
+input Sorting {
+  key: String
+  by: SortBy
+}
+
+type Query {
+  "占坑"
+  _empty: String
+}
+
+type Mutation {
+  "占坑"
+  _emptyMutation: String
+}
+
+type Subscription {
+  "占坑"
+  _onEmpty: String
+}
