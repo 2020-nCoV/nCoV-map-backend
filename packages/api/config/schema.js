@@ -8,13 +8,13 @@ module.exports = {
   server: {
     host: {
       doc: '绑定地址',
-      format: 'String',
+      format: String,
       default: '127.0.0.1',
       env: 'HOST',
     },
     port: {
       doc: '监听端口',
-      format: 'Number',
+      format: Number,
       default: 8000,
       env: 'PORT',
     },
@@ -40,45 +40,52 @@ module.exports = {
     },
     host: {
       doc: '数据库地址',
-      format: 'String',
+      format: String,
       default: '127.0.0.1',
       env: 'DB_HOST',
     },
     port: {
       doc: '数据库端口',
-      format: 'Number',
+      format: Number,
       default: 5432,
       env: 'DB_PORT',
     },
     database: {
       doc: '数据库名',
-      format: 'String',
+      format: String,
+      default: 'postgres',
       env: 'DB_DATABASE',
     },
     username: {
       doc: '数据库用户',
-      format: 'String',
+      format: String,
+      default: 'postgres',
       env: 'DB_USERNAME',
     },
     password: {
       doc: '数据库密码',
-      format: 'String',
+      format: String,
+      default: '',
       env: 'DB_PASSWORD',
     },
-    // 下面这些配置一般也不会修改，直接初始化写死了
     timezone: {
       default: '+08:00',
     },
     define: {
-      underscored: true,
-      freezeTableName: false,
-      charset: 'utf8',
+      underscored: { default: true },
+      freezeTableName: { default: false },
+      charset: { default: 'utf-8' },
       dialectOptions: {
-        collate: 'utf8_general_ci',
+        collate: { default: 'utf8_general_ci-8' },
       },
-      timestamps: true,
+      timestamps: { default: true },
     },
-    pool: { max: 5, min: 0, acquire: 30000, idel: 10000 },
+    pool: {
+      max: { default: 5 },
+      min: { default: 0 },
+      acquire: { default: 30000 },
+      idel: { default: 10000 },
+    },
   },
   cors: {
     origin: {
@@ -117,17 +124,17 @@ module.exports = {
   graphql: {
     debug: {
       doc: '是否启用 GraphQL debug 模式',
-      format: 'Boolean',
+      format: Boolean,
       default: false,
     },
     tracing: {
       doc: '是否启用 GraphQL tracing 模式',
-      format: 'Boolean',
+      format: Boolean,
       default: false,
     },
     introspection: {
       doc: '是否启用GraphQL introspection 模式',
-      format: 'Boolean',
+      format: Boolean,
       default: false,
     },
   },
