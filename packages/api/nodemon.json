@@ -1,6 +1,6 @@
 {
   "ignore": ["**/*.test.js", "**/*.benchmark.js", "**/*.spec.js", "node_modules"],
-  "watch": ["app.js", "config", "directives", "endpoints", "models", "typedefs", "resolvers", "services"],
+  "watch": ["app.js", "config", "directives", "endpoints", "models", "typedefs", "resolvers", "services", "crons"],
   "exec": "yarn start",
   "ext": "js"
 }

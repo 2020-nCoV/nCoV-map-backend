@@ -138,4 +138,16 @@ module.exports = {
       default: false,
     },
   },
+  cron: {
+    cronExpression: {
+      doc: 'Cron expression',
+      format: String,
+      default: '0 * * * *',
+    },
+    timezone: {
+      doc: 'Cron timezone',
+      format: String,
+      default: 'Asia/Shanghai',
+    },
+  },
 };

@@ -1,0 +1,27 @@
+type NCovReport {
+  region: String
+  total_confirm: Int
+  total_suspect: Int
+  total_dead: Int
+  total_heal: Int
+  total_show_rate: Boolean
+  total_show_heal: Boolean
+  total_dead_rate: Float
+  total_heal_rate: Float
+  today_confirm: Int
+  today_suspect: Int
+  today_dead: Int
+  today_heal: Int
+  today_is_updated: Boolean
+
+  created_at: ISODate
+  updated_at: ISODate
+}
+
+type NCov {
+  reports: [NCovReport]
+}
+
+extend type Query {
+  ncov: NCov
+}

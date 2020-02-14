@@ -8,9 +8,11 @@ const cors = require('cors');
 const logger = require('morgan');
 const config = require('rob-config');
 
+const crons = require('./crons');
 const models = require('./models');
 const graphqlMiddleware = require('./middlewares/graphql');
 
+crons();
 const app = express();
 app.set('view engine', 'jade');
 
