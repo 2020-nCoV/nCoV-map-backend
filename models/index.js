@@ -16,6 +16,7 @@ module.exports = {
 
     // 实时疫情
     epid_mapdb: require('./epidemic_data'),
+    epid_sumdb: require('./epidemic_sum'),
 
     // 建议反馈
     infection_tidingdb: require('./infection_tiding'),
